@@ -9,12 +9,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Hola profes somos el grupo 3 y este es el frontend XD </h1>
+        <div>
+          <img src="https://media1.tenor.com/m/aSkdq3IU0g0AAAAC/laughing-cat.gif" alt="" />
+        </div>
       </div>
       <h1>Vite + React</h1>
       <div className="card">
@@ -25,9 +23,6 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
