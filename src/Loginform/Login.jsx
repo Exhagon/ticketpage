@@ -10,7 +10,19 @@ const Login = () => {
   const [eyeIcon, setEyeIcon] = useState(eyeclose);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const validateEmail = (email) => {
+    // Expresión regular para validar el correo electrónico
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const sendAuth = ()=>{
+     if (!validateEmail(username)) {
+      console.log('Correo electrónico no válido');
+    } else {
+      console.log('aa');
+    }
     alert(`Username: ${username}\nPassword: ${password}`);
   }
   const togglepasswordVisibility = () => {
