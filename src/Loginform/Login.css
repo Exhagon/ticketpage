@@ -3,13 +3,6 @@
   --primario:#292e5e;
   --secundario: #050113;
 }
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-*,*:before, *:after{
-  box-sizing: inherit;
-}
 .center {
   display: flex;
   justify-content: center;

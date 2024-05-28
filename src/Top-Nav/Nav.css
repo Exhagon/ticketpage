@@ -1,0 +1,51 @@
+.top{
+    background-color: black;
+    width: 100%;
+    height: 10rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.topcontent{
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 10rem;
+    margin: 0;
+    padding: 0;
+}
+.top h1{
+    color: white;
+    font-size: 4rem;
+}
+
+.top nav ul li {
+    margin-left: 2rem; /* Espacio entre los elementos de la lista */
+}
+
+.top nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Alinea los elementos de la lista en línea */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    gap: 2rem;
+}
+.top nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.top li{
+    color: white;
+    font-size: 2.5rem;
+    padding: 0 10rem;
+}
+
+.notification-icon {
+    font-size: 3rem;
+    color: white;
+    margin-left: 2rem;
+}
