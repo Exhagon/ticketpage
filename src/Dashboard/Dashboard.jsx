@@ -6,7 +6,7 @@ import Ticket from './Ticket/Ticket';
 import TicketModal from './Modal/TicketModal';
 const Dashboard = () => {
     const [cTicket, setCTicket] = useState([]);
-    const [tiBottomNav/>R, setTicketR] = useState(0);
+    const [ticketR, setTicketR] = useState(0);
     const [name, setName] = useState('');
     const [selectedTicket, setSelectedTicket] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
