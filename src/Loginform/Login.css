@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+:root{
+  --primario:#292e5e;
+  --secundario: #050113;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  
+}
+.root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000;
+  }
+.dialog{
+  background-color: white;
+  position: inherit;
+  width: 62.4rem;
+  height: 65.2rem;
+  outline: solid 0.1rem #000;
+  outline-offset: -0.1rem;
+  border-radius: 3.4rem;
+}
+.dialogI{
+  background-color: white;
+  position: inherit;
+  width: 57.8rem;
+  height: 60.4rem;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem #00000040;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tickety{
+    color: black;
+    font-size: 6rem;
+    font-family: Koulen, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    left: 83.1rem;
+    top: 28.1rem;
+    width: 25.9rem;
+    height: 11.7rem;
+    text-shadow: 0rem 0.4rem 0.4rem #00000040;
+    flex-direction: column;
+}
+.textbox{
+  width: 37.5rem;
+  height: 5.5rem;
+  color: white;
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  outline: solid 0.3rem #010741;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--secundario);
+}
+.textbox input{
+  width: 32.5rem;
+  outline: solid 0rem #010741;
+}
+.textbox img{
+  width: 3rem;
+  cursor: pointer;
+}
+.button{
+  width: 19.1rem;
+  height: 5.7rem;
+  border-radius: 1.5rem;
+  background-color: var(--primario);
+  justify-content: center;
+  align-items: center;
+}
+.isesion{
+  color: white;
+  font-size: 2rem;
+  font-family: Koulen, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  margin: 0;
+}
