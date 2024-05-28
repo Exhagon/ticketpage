@@ -19,7 +19,7 @@ const BottomNav = () => {
                     </ul>
                 </nav>
                 <div style={{height:"4.5rem", width:"3rem", marginLeft:"2rem"}}></div>
-                <div style={{height:"6rem", width:"6rem", marginLeft:"2rem"}}></div>
+                <div style={{height:"6rem", width:"6rem", marginLeft:"0rem"}}></div>
             </div>
         </div>
 
