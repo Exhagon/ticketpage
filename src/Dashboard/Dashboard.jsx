@@ -57,7 +57,7 @@ const Dashboard = () => {
 
                     <div className='rectangle' />
                     {cTicket.map((ticket, index) => (
-                        <div key={index} onClick={() => handleTicketClick(ticket)}>
+                        <div key={index} style={{cursor:'pointer'}} onClick={() => handleTicketClick(ticket)}>
                             <Ticket
                                 key={index}
                                 nombre={ticket.nombre}
