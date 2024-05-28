@@ -6,7 +6,7 @@ import Ticket from './Ticket/Ticket';
 import TicketModal from './Modal/TicketModal';
 const Dashboard = () => {
     const [cTicket, setCTicket] = useState([]);
-    const [ticketR, setTicketR] = useState(0);
+    const [tiBottomNav/>R, setTicketR] = useState(0);
     const [name, setName] = useState('');
     const [selectedTicket, setSelectedTicket] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,7 +57,7 @@ const Dashboard = () => {
 
                     <div className='rectangle' />
                     {cTicket.map((ticket, index) => (
-                        <div key={index} onClick={() => handleTicketClick(ticket)}>
+                        <div key={index} style={{cursor:'pointer'}} onClick={() => handleTicketClick(ticket)}>
                             <Ticket
                                 key={index}
                                 nombre={ticket.nombre}
