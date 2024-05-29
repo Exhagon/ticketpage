@@ -28,7 +28,9 @@ html, body, #root {
   padding: 0;
   box-sizing: border-box;
 }
-
+#root {
+  height: auto;
+}
 a {
   font-weight: 500;
   color: #646cff;
