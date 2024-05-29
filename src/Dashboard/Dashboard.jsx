@@ -5,7 +5,7 @@ import BottomNav from '../bottom-nav/BottomNav';
 import Ticket from './Ticket/Ticket';
 import TicketModal from './Modal/TicketModal';
 const Dashboard = () => {
-    const [cTicket, setCTicket] = useState([]);
+    const [cTicket, setCTicket] = useState([]); // esto se hace que se actualice una cantidad determinada
     const [ticketR, setTicketR] = useState(0);
     const [name, setName] = useState('');
     const [selectedTicket, setSelectedTicket] = useState(null);
