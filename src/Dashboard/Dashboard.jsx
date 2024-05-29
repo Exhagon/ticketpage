@@ -66,6 +66,7 @@ const Dashboard = () => {
                                 time={ticket.time}
                                 timeColor={getTimeColor(ticket.time) }
                             />
+                            
                             <div className='rectangle' />
                         </div>
                     ))}
