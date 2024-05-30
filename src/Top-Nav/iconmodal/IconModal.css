@@ -1,0 +1,48 @@
+.icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  .icon-container ul  {
+    width: 30rem;
+  }
+  .icon-modal {
+    position: absolute;
+    right: 0;
+    top: 5rem; /* Ajusta según sea necesario */
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+  }
+  
+  .icon-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .icon-modal li {
+    border-bottom: 0.1rem solid #444;
+    width: 100%;
+  }
+  
+  .icon-modal li:last-child {
+    border-bottom: none;
+  }
+  
+  .icon-option {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    width: 18rem;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .icon-option:hover {
+    background-color: #555;
+  }
