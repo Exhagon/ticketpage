@@ -19,13 +19,14 @@ export const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         try {
-            const response = await axios.post('/api/logout');
-            if (response.status === 200) {
-                setIsAuthenticated(false);
-            }
+            // const response = await axios.post('/api/logout');
+            // if (response.status === 200) {
+            //     setIsAuthenticated(false);
+            // }
         } catch (error) {
             console.error('Logout failed:', error);
         }
+        setIsAuthenticated(false);
     };
     const checkAuth = async () => {
         try {

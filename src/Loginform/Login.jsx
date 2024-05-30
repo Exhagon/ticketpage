@@ -21,6 +21,11 @@ const Login = () => {
     return regex.test(email);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      sendAuth();
+    }
+  };
   const sendAuth = async() => {
     if (!validateEmail(username)) {
       console.log('Correo electrónico no válido');
@@ -56,10 +61,10 @@ const Login = () => {
           <div className='dialogI '>
             <h1 className='tickety'>Ticket.com</h1>
             <input type='email' placeholder='email' id='email'
-              className='textbox' value={username} onChange={(e) => setUsername(e.target.value)} />
+              onKeyPress={handleKeyPress} className='textbox' value={username} onChange={(e) => setUsername(e.target.value)} />
             <div className='textbox'>
               <input type={visible ? "text" : "password"} placeholder='password' id='password'
-                className='textbox' value={password} onChange={(e) => setPassword(e.target.value)} />
+                onKeyPress={handleKeyPress} className='textbox' value={password} onChange={(e) => setPassword(e.target.value)} />
               <img src={eyeIcon} id='eyeicon' onClick={togglepasswordVisibility}></img>
             </div>
             <button className='button' onClick={sendAuth} > <p className='isesion'>Iniciar sesion</p></button>
