@@ -31,7 +31,6 @@ const Login = () => {
       console.log('Correo electrónico no válido');
     } else {
       await login(username,password);
-      console.log(login());
       navigate('/dashboard', {
         replace: true,
         state: {
