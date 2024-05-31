@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
             if (response.status === 200) {
               setIsAuthenticated(true);
             }
-            setIsAuthenticated(true);
+            setIsAuthenticated(false);
         } catch (error) {
             console.error('Login failed:', error);
         }
