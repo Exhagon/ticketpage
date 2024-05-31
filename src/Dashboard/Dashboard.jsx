@@ -10,13 +10,21 @@ const Dashboard = () => {
     const [name, setName] = useState('');
     const [selectedTicket, setSelectedTicket] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const initialTickets = [
+        { nombre: "Ticket 1", tTicket: 101, pTicket: 2, time: '00:00:30' },
+        { nombre: "Ticket 2", tTicket: 102, pTicket: 3, time: '00:30:00' },
+        { nombre: "Ticket 3", tTicket: 103, pTicket: 4, time: '00:10:00' },
+        { nombre: "Ticket 4", tTicket: 104, pTicket: 5, time: '00:15:00' }
+    ];
     useEffect(() => {
-        const initialTickets = [
-            { nombre: "Ticket 1", tTicket: 101, pTicket: 2, time: '00:00:30' },
-            { nombre: "Ticket 2", tTicket: 102, pTicket: 3, time: '00:30:00' },
-            { nombre: "Ticket 3", tTicket: 103, pTicket: 4, time: '00:10:00' },
-            { nombre: "Ticket 4", tTicket: 104, pTicket: 5, time: '00:15:00' }
-        ];
+        setInterval(() => {
+            setCTicket(prevTickets =>
+                prevTickets.map(ticket => ({
+                    ...ticket,
+                    time: decrementTime(ticket.time)
+                }))
+            );
+        },1000);
         setName("Joaquin");
         setCTicket(initialTickets);
         setTicketR(2);
@@ -33,6 +41,18 @@ const Dashboard = () => {
             return 'black';
         }
     };
+    const decrementTime = (time) => {
+        const [hours, minutes, seconds] = time.split(':').map(Number);
+        let totalSeconds = hours * 3600 + minutes * 60 + seconds - 1;
+
+        if (totalSeconds < 0) totalSeconds = 0;
+
+        const newHours = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+        const newMinutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+        const newSeconds = (totalSeconds % 60).toString().padStart(2, '0');
+
+        return `${newHours}:${newMinutes}:${newSeconds}`;
+    };
     const handleTicketClick = (ticket) => {
         setSelectedTicket(ticket);
         setIsModalOpen(true);
@@ -41,7 +61,7 @@ const Dashboard = () => {
         setIsModalOpen(false);
         setSelectedTicket(null);
     };
-    const acceptTicket =()=>{
+    const acceptTicket = () => {
         alert('aceptó elticket')
         closeModal();
     }
@@ -52,21 +72,21 @@ const Dashboard = () => {
             <div className='contentD'>
                 <h1>Hola {name}, hoy has resuelto</h1>
                 <h1 style={{ marginTop: '0rem', marginBottom: '5rem' }}>{ticketR} Tickets</h1>
-               
+
                 <div className='contentF'>
 
                     <div className='rectangle' />
                     {cTicket.map((ticket, index) => (
-                        <div key={index} style={{cursor:'pointer'}} onClick={() => handleTicketClick(ticket)}>
+                        <div key={index} style={{ cursor: 'pointer' }} onClick={() => handleTicketClick(ticket)}>
                             <Ticket
                                 key={index}
                                 nombre={ticket.nombre}
                                 tTicket={ticket.tTicket}
                                 pTicket={ticket.pTicket}
                                 time={ticket.time}
-                                timeColor={getTimeColor(ticket.time) }
+                                timeColor={getTimeColor(ticket.time)}
                             />
-                            
+
                             <div className='rectangle' />
                         </div>
                     ))}
@@ -75,7 +95,7 @@ const Dashboard = () => {
 
             <BottomNav />
             {isModalOpen && selectedTicket && (
-                <TicketModal 
+                <TicketModal
                     acceptTicket={acceptTicket}
                     ticket={selectedTicket}
                     onClose={closeModal}
