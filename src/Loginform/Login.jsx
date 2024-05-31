@@ -65,7 +65,7 @@ const Login = () => {
             <div className='textbox'>
               <input type={visible ? "text" : "password"} placeholder='password' id='password'
                 onKeyPress={handleKeyPress} className='textbox' value={password} onChange={(e) => setPassword(e.target.value)} />
-              <img src={eyeIcon} id='eyeicon' onClick={togglepasswordVisibility}></img>
+              <img src={eyeIcon} style={{margin:'1rem'}} id='eyeicon' onClick={togglepasswordVisibility}></img>
             </div>
             <button className='button' onClick={sendAuth} > <p className='isesion'>Iniciar sesion</p></button>
           </div>
