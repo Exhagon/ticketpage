@@ -7,10 +7,10 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            /*const response = await axios.post('/api/login', { username, password });
+            const response = await axios.post('https://api-grupo-3.azurewebsites.net/api/v1/auth/login', { username, password });
             if (response.status === 200) {
               setIsAuthenticated(true);
-            }*/
+            }
             setIsAuthenticated(true);
         } catch (error) {
             console.error('Login failed:', error);
